@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<title>temple</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/behavior.css">
+		<link rel="stylesheet" href="css/style.css">		
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default my-navbar" role="navigation">
+			<!-- container-fluid -->
+			<div class="container-fluid">	
+				<!-- navbar-header -->
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed my-navbar-mobile-menu" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="glyphicon glyphicon-th my-navbar-mobile-menu-glyphicon"></span>
+					</button>
+					<a class="navbar-brand my-navbar-brand" href="#">
+						<span class="my-navbar-brand-title">江苏师范大学</span>
+					</a>
+				</div>
+				<!-- navbar-header End-->
+				<!-- 响应式出现的内容 -->
+				<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">			
+							<!-- my-navbar-btn的active是自己写的，切记 -->
+							<a class="btn btn-xs my-navbar-btn active" href="#">
+								<span class="glyphicon glyphicon-bell my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">通知公告</p>
+							</a>	
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-envelope my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">内部邮件</p>
+							</a>
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-phone-alt my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">通讯名录</p>
+							</a>
+							<a class="btn btn-xs hidden-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-folder-open my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">文件共享</p>
+							</a>
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-briefcase my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">办公系统</p>
+							</a>
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-book my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">学生管理</p>
+							</a>					
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-thumbs-up my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">学生奖助</p>
+							</a>
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-cog my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">系统管理</p>
+							</a>
+							<a class="btn btn-xs my-navbar-btn" href="#">
+								<span class="glyphicon glyphicon-user my-navbar-btn-glyphicon"></span> 
+								<p class="text-center my-navbar-btn-title">个人设置</p>
+							</a>
+					</ul>
+				</div>
+				<!-- 响应式出现的内容 End -->
+			</div>
+			<!-- container-fluid End -->
+		</nav>	
+		<!-- Navbar End-->
+		
+		<!-- main-container-->
+		<div class="main-container" id="main-container">
+			<!-- my-sidebar -->
+			<!-- my-sidebar-btn的.active是自己写的，切记 -->
+			<div class="my-sidebar">	
+				<ul class="list-group">
+					<li class="list-group-item text-center hidden-xs my-sidebar-userinfo">
+						<span class="my-sidebar-userinfo-title">当前用户：管理员</span>
+					</li>
+					<li class="list-group-item text-center my-sidebar-header">
+						<span class="my-sidebar-header-title">通知公告</span>
+					</li>
+					<li class="list-group-item text-center my-sidebar-btn active">
+					    <a url="" role="ajax">
+					   		<span class="glyphicon glyphicon-th-list my-sidebar-btn-glyphicon"></span>
+					   		<span class="my-sidebar-btn-title">通告列表</span> 
+						</a>	
+					</li>	
+					<ul class="list-group">
+						<li class="list-group-item text-center my-sidebar-subbtn">
+						<a url="" role="ajax">
+							<span class="glyphicon glyphicon-search my-sidebar-subbtn-glyphicon"></span>
+							<span class="my-sidebar-subbtn-title">123123123</span>	
+						</a>		
+						</li>
+						<li class="list-group-item text-center my-sidebar-subbtn">
+							<a url="" role="ajax">
+							   <span class="glyphicon glyphicon-plus my-sidebar-subbtn-glyphicon"></span>
+							   <span class="my-sidebar-subbtn-title">123123123</span>
+							</a>		
+						</li>
+					</ul>					
+					<li class="list-group-item text-center my-sidebar-btn">
+						<a url="" role="ajax">
+							<span class="glyphicon glyphicon-search my-sidebar-btn-glyphicon"></span>
+							<span class="my-sidebar-btn-title">查询通告</span>	
+						</a>		
+					</li>
+					<ul class="list-group">
+						<li class="list-group-item text-center my-sidebar-subbtn">
+						<a url="" role="ajax">
+							<span class="glyphicon glyphicon-search my-sidebar-subbtn-glyphicon"></span>
+							<span class="my-sidebar-subbtn-title">123123123</span>	
+						</a>		
+						</li>
+						<li class="list-group-item text-center my-sidebar-subbtn">
+							<a url="" role="ajax">
+							   <span class="glyphicon glyphicon-plus my-sidebar-subbtn-glyphicon"></span>
+							   <span class="my-sidebar-subbtn-title">123123123</span>
+							</a>		
+						</li>
+					</ul>		
+					<li class="list-group-item text-center my-sidebar-btn">
+						<a url="" role="ajax">
+						   <span class="glyphicon glyphicon-plus my-sidebar-btn-glyphicon"></span>
+						   <span class="my-sidebar-btn-title">添加通告</span>
+						</a>		
+					</li>
+					<li class="list-group-item text-center my-sidebar-btn">
+						<a url="" role="ajax">
+							<span class="glyphicon glyphicon-pencil my-sidebar-btn-glyphicon"></span>
+							<span class="my-sidebar-btn-title">管理通告</span>
+						</a>		
+					</li>
+					<li class="list-group-item text-center my-sidebar-btn">
+						<a url="" role="ajax">
+							<span class="glyphicon glyphicon-pencil my-sidebar-btn-glyphicon"></span>
+							<span class="my-sidebar-btn-title">分类管理</span>
+						</a>		
+					</li>
+					<li class="list-group-item text-center my-sidebar-btn">
+						<a url="" role="ajax">
+							<span class="glyphicon glyphicon-plus my-sidebar-btn-glyphicon"></span>
+							<span class="my-sidebar-btn-title">新建分类</span>
+						</a>		
+					</li>
+				</ul>
+			</div>
+			<!-- my-sidebar End -->	
+			<!-- main-content -->
+			<div class="main-content" id="main-content">
+				<!-- breadcrumbs -->
+				<div class="my-main-content-breadcrumbs" id="my-main-content-breadcrumbs">
+					<ol class="breadcrumb hidden-xs">
+						<span class="glyphicon glyphicon-home"></span> 
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Library</a></li>
+						<li class="active">Data</li>
+					</ol>
+				</div>
+				<!-- breadcrumbs End-->
+				<!-- content -->
+				<div class="content">
+					<div class="table-responsive my-notice-table">
+					  <table class="table table-bordered table-hover">
+					    <thead>
+						    <tr class="info">
+							    <td>标题</td>
+							    <td>发布部门</td>
+								<td>发布类别</td>
+								<td>发布人</td>
+								<td>发布时间</td>
+						    </tr>
+					    </thead>
+					    <tbody>
+						    <tr>
+							    <td>关于网上请假</td>
+							    <td>系统的说明</td>
+							    <td>江苏师范大学	系统帮助</td>
+					    		<td>孟凡立</td>
+					    		<td>2014-03-03 14:59:16</td>					    
+							  </tr>
+							  <tr>
+							    <td>关于网上请假</td>
+							    <td>系统的说明</td>
+							    <td>江苏师范大学	系统帮助</td>
+					    		<td>孟凡立</td>
+					    		<td>2014-03-03 14:59:16</td>					    
+							  </tr>
+								<tr>
+							    <td>关于网上请假</td>
+							    <td>系统的说明</td>
+							    <td>江苏师范大学	系统帮助</td>
+					    		<td>孟凡立</td>
+					    		<td>2014-03-03 14:59:16</td>					    
+							  </tr>
+					    </tbody>
+					  </table>
+					</div>	
+				</div>
+				<!-- content End-->
+			</div>
+			<!-- main-content End-->
+		</div>
+		<!-- main-container End-->
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/core.js"></script>
+	</body>
+</html>

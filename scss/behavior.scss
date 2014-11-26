@@ -1,0 +1,50 @@
+@import "rules.scss";
+//导航栏
+a.my-navbar-btn.active,
+a.my-navbar-btn:hover{
+	@include color(white);
+	@include no-shadow;
+	@include bgc(#2980b9);
+}
+//导航栏 End
+
+//侧边栏
+/* 侧边栏按钮active时，my-sidebar-btn的bgc变成蓝色，glyphicon和title变成白色 */
+li.my-sidebar-btn.active{
+	@include bgc(#3498db);
+	> a{
+		> span.my-sidebar-btn-glyphicon,
+		> span.my-sidebar-btn-title{
+			@include color(white);
+		}
+	}
+}
+
+li.my-sidebar-subbtn.active{
+	//屏蔽bs自己border颜色
+	border: 1px solid #ECF0F1 !important;
+	@include bgc(#ECF0F1);
+	> a{
+		> span.my-sidebar-subbtn-glyphicon,
+		> span.my-sidebar-subbtn-title{
+			@include color(black);
+		}
+	}
+}
+
+li.my-sidebar-subbtn > a:hover,
+li.my-sidebar-btn > a:hover{
+	text-decoration: none !important; 
+}
+
+
+
+
+
+//侧边栏 End
+
+//响应式 Start
+@media screen and (max-width: 768px){
+
+}
+//响应式 End

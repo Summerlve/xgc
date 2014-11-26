@@ -1,0 +1,239 @@
+@import "rules.scss";
+/* 
+	所有的字体默认为14px
+	字体在14px-16px之间
+	图标字体大小看情况
+*/
+*{
+	font-size: 14px;
+}
+
+//导航栏 Start 
+nav.my-navbar {
+	margin: 0;
+	height: auto;
+	@include no-border;
+	@include no-border-radius;
+	@include bgc(#3498DB);
+}
+
+button.my-navbar-mobile-menu{
+	margin-top: 13px;
+	padding: 0;
+	@include no-border;
+	@include bgc(#3498DB);
+}
+
+//mobile的menu按钮
+span.my-navbar-mobile-menu-glyphicon{
+	@include mobile-menu-glyphicon;
+}
+
+a.my-navbar-brand{
+	margin-top: 20px;
+}
+
+span.my-navbar-brand-title{
+	@include my-navbar-brand-title;
+}
+
+span.my-navbar-brand-glyphicon{
+	@include my-navbar-brand-glyphicon
+}
+
+a.my-navbar-btn{
+	margin: 15px 9px 15px 9px;
+	padding: 0px;
+	width: 78px;
+	height: auto;
+	border-radius: 11px;
+}
+
+span.my-navbar-btn-glyphicon{
+	margin-top: 10px;
+	font-size: 22px;
+	@include color(white);
+}
+
+p.my-navbar-btn-title{
+	margin-top: 0;
+	@include color(white);
+}
+//导航栏 End
+
+//主容器 Start
+div.main-container{
+	overflow: hidden;
+}
+//主容器 End
+
+//侧边栏 Start
+div.my-sidebar{
+	float: left;
+	margin-bottom: -3000px;
+	padding-bottom: 3000px;
+	width: 200px;
+	background-color: #f2f2f2;
+}
+
+//侧边栏的子栏
+ul.my-sidebar-sub{
+	display: none;
+}
+
+li.my-sidebar-userinfo{	
+	@include no-border-radius;
+	span.my-sidebar-userinfo-title{
+		font-size: 15px !important;
+	}
+}
+
+li.my-sidebar-header{
+	@include no-border-radius;
+	@include bgc(rgb(239,239,239));
+	
+	span.my-sidebar-header-title{
+		font-size: 19px !important;
+	}
+	span.my-sidebar-header-glyphicon{
+		float: right;
+		font-size: 13px !important;
+	}
+}
+
+li.my-sidebar-btn{
+	// 去掉 bs中的list-group-item的圆角
+	@include my-sidebar-btn;
+}
+
+li.my-sidebar-subbtn{
+	@include my-sidebar-subbtn;
+}
+//侧边栏 End
+
+//.main-content Start
+//.main-content的padding不需要设置
+div.main-content{
+  	margin-left: 200px;
+  	padding: 0;
+  	min-height: 780px;
+}
+
+ol.breadcrumb{
+	span{
+		@include breadcrumb-font-size;
+	}
+	li{
+		@include breadcrumb-font-size;
+		@include no-border-radius;		
+
+		a{
+			@include breadcrumb-font-size;
+		}
+	}	
+	margin-bottom: 0;
+}
+
+//设置.content的padding，以保持排版的一致
+div.content{
+	padding: 25px;
+}
+//.main-content End
+
+//零碎部件 Start
+div.my-notice-table{
+	
+}
+//零碎部件 End
+
+
+//响应式 Start
+@media screen and (max-width: 768px){
+	a.my-navbar-brand{
+		margin-top: 0;
+		@include color(white);
+	}
+	
+	span.my-navbar-brand-title{
+		font-size: 20px;
+	}
+	
+	span.my-navbar-brand-glyphicon{
+		font-size: 17px;
+	}
+	
+	a.my-navbar-btn{
+		margin-top: 5px;
+		margin-left: 17px;
+		padding: 0px;
+		width: 78px;
+		height: auto;
+		border-radius: 11px;
+	}
+	
+	span.my-navbar-btn-glyphicon{
+		margin-top: 10px;
+		font-size: 27px;
+		@include color(white);
+	}
+
+	p.my-navbar-btn-title{
+		margin-top: 0;
+		@include color(white);
+	}
+	
+	div.my-sidebar{
+		float: none !important;
+		position: static !important;
+		margin: 0;
+		padding: 0;
+		width: auto !important;
+		height: auto !important;	
+	}
+	
+	li.my-sidebar-header{
+		span.my-sidebar-header-title{
+			font-size: 16px !important;
+		}
+		span.my-sidebar-header-glyphicon{
+			position: relative;	
+			top: 4px;
+			right: 5px;
+			font-size: 16px !important;
+			@include color(#95A5A6);
+		}
+	}
+	
+	li.my-sidebar-btn{
+		border-left: 0 !important;
+		border-right: 0 !important;
+		a{
+			span.my-sidebar-btn-title,
+			span.my-sidebar-btn-glyphicon{
+				font-size: 15px;
+			}
+		}
+	}
+	
+	div.main-content {
+		margin-left: 0 !important;
+		min-height: 0 !important;
+	}
+	
+	div.content{
+		padding: 0;
+	}
+	
+	//零碎部件响应式 Start
+	div.my-notice-table td{
+		font-size: 15px !important;
+	}
+	//零碎部件响应式 End
+} 
+//响应式 End
+
+
+
+
+
+

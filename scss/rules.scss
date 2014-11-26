@@ -1,0 +1,71 @@
+//设置背景颜色
+@mixin bgc($bgc){
+	background-color: $bgc !important;
+}
+
+//设置字体颜色
+@mixin color($color){
+	color: $color !important;
+}
+
+//取消边框
+@mixin no-border{
+	border: 0 !important;
+}
+
+//取消圆角
+@mixin no-border-radius{
+	border-radius: 0 !important;
+}
+
+//去掉内阴影
+@mixin no-shadow{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+//mobile的menu按钮
+@mixin mobile-menu-glyphicon{
+	font-size: 25px;
+	color: white;
+	background-color: #3498DB;
+}
+
+@mixin my-navbar-brand-title{
+	font-size: 25px;
+	color: white;
+}
+
+@mixin my-navbar-brand-glyphicon{
+	font-size: 22px;
+	color: white;
+}
+
+
+//面包削导航的整体字体大小，默认15px
+@mixin breadcrumb-font-size($fontSize: 15px){
+	font-size: $fontSize !important;
+}
+
+//sidebar-btn
+@mixin my-sidebar-btn{
+	@include no-border-radius;
+	> a{
+		> span.my-sidebar-btn-title,
+		> span.my-sidebar-btn-glyphicon{
+			font-size: 16px;
+		}
+	}	
+}
+
+//sidebar-subbtn
+@mixin my-sidebar-subbtn{
+	@include no-border-radius;
+	> a{
+		> span.my-sidebar-subbtn-title,
+		> span.my-sidebar-subbtn-glyphicon{
+			@include color(black);
+			font-size: 14px;			
+		}
+	}	
+}

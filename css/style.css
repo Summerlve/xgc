@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* 
+	所有的字体默认为14px
+	字体在14px-16px之间
+	图标字体大小看情况
+*/
+* {
+  font-size: 14px; }
+
+nav.my-navbar {
+  margin: 0;
+  height: auto;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background-color: #3498DB !important; }
+
+button.my-navbar-mobile-menu {
+  margin-top: 13px;
+  padding: 0;
+  border: 0 !important;
+  background-color: #3498DB !important; }
+
+span.my-navbar-mobile-menu-glyphicon {
+  font-size: 25px;
+  color: white;
+  background-color: #3498DB; }
+
+a.my-navbar-brand {
+  margin-top: 20px; }
+
+span.my-navbar-brand-title {
+  font-size: 25px;
+  color: white; }
+
+span.my-navbar-brand-glyphicon {
+  font-size: 22px;
+  color: white; }
+
+a.my-navbar-btn {
+  margin: 15px 9px 15px 9px;
+  padding: 0px;
+  width: 78px;
+  height: auto;
+  border-radius: 11px; }
+
+span.my-navbar-btn-glyphicon {
+  margin-top: 10px;
+  font-size: 22px;
+  color: white !important; }
+
+p.my-navbar-btn-title {
+  margin-top: 0;
+  color: white !important; }
+
+div.main-container {
+  overflow: hidden; }
+
+div.my-sidebar {
+  float: left;
+  margin-bottom: -3000px;
+  padding-bottom: 3000px;
+  width: 200px;
+  background-color: #f2f2f2; }
+
+ul.my-sidebar-sub {
+  display: none; }
+
+li.my-sidebar-userinfo {
+  border-radius: 0 !important; }
+  li.my-sidebar-userinfo span.my-sidebar-userinfo-title {
+    font-size: 15px !important; }
+
+li.my-sidebar-header {
+  border-radius: 0 !important;
+  background-color: #efefef !important; }
+  li.my-sidebar-header span.my-sidebar-header-title {
+    font-size: 19px !important; }
+  li.my-sidebar-header span.my-sidebar-header-glyphicon {
+    float: right;
+    font-size: 13px !important; }
+
+li.my-sidebar-btn {
+  border-radius: 0 !important; }
+  li.my-sidebar-btn > a > span.my-sidebar-btn-title,
+  li.my-sidebar-btn > a > span.my-sidebar-btn-glyphicon {
+    font-size: 16px; }
+
+li.my-sidebar-subbtn {
+  border-radius: 0 !important; }
+  li.my-sidebar-subbtn > a > span.my-sidebar-subbtn-title,
+  li.my-sidebar-subbtn > a > span.my-sidebar-subbtn-glyphicon {
+    color: black !important;
+    font-size: 14px; }
+
+div.main-content {
+  margin-left: 200px;
+  padding: 0;
+  min-height: 780px; }
+
+ol.breadcrumb {
+  margin-bottom: 0; }
+  ol.breadcrumb span {
+    font-size: 15px !important; }
+  ol.breadcrumb li {
+    font-size: 15px !important;
+    border-radius: 0 !important; }
+    ol.breadcrumb li a {
+      font-size: 15px !important; }
+
+div.content {
+  padding: 25px; }
+
+@media screen and (max-width: 768px) {
+  a.my-navbar-brand {
+    margin-top: 0;
+    color: white !important; }
+
+  span.my-navbar-brand-title {
+    font-size: 20px; }
+
+  span.my-navbar-brand-glyphicon {
+    font-size: 17px; }
+
+  a.my-navbar-btn {
+    margin-top: 5px;
+    margin-left: 17px;
+    padding: 0px;
+    width: 78px;
+    height: auto;
+    border-radius: 11px; }
+
+  span.my-navbar-btn-glyphicon {
+    margin-top: 10px;
+    font-size: 27px;
+    color: white !important; }
+
+  p.my-navbar-btn-title {
+    margin-top: 0;
+    color: white !important; }
+
+  div.my-sidebar {
+    float: none !important;
+    position: static !important;
+    margin: 0;
+    padding: 0;
+    width: auto !important;
+    height: auto !important; }
+
+  li.my-sidebar-header span.my-sidebar-header-title {
+    font-size: 16px !important; }
+  li.my-sidebar-header span.my-sidebar-header-glyphicon {
+    position: relative;
+    top: 4px;
+    right: 5px;
+    font-size: 16px !important;
+    color: #95A5A6 !important; }
+
+  li.my-sidebar-btn {
+    border-left: 0 !important;
+    border-right: 0 !important; }
+    li.my-sidebar-btn a span.my-sidebar-btn-title,
+    li.my-sidebar-btn a span.my-sidebar-btn-glyphicon {
+      font-size: 15px; }
+
+  .main-content {
+    margin-left: 0 !important;
+    min-height: 0 !important; }
+
+  div.content {
+    padding: 0; }
+
+  div.my-notice-table td {
+    font-size: 15px !important; } }
+
+/*# sourceMappingURL=style.css.map */

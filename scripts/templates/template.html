@@ -1,0 +1,24 @@
+<div class="table-responsive my-notice-table">
+	<table class="table table-bordered table-hover">
+		<thead>
+			<tr class="info">
+				<% for(var i = 0; i < th.length; i++) { %>
+					<td>
+					    <%=th[i]%>
+					</td>
+				<% } %>
+			</tr>
+		</thead>
+		<tbody>
+			<% for(var i = 0; i < comment.length; i++) { %>
+				<tr>
+					<% for (var j = 0; j < comment[i].length; j++) { %>
+						<td>
+							<%=comment[i][j]%>
+						</td>
+					<% } %>
+				</tr>	
+			<% } %>	
+		</tbody>
+	</table>
+</div>
