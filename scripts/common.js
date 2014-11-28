@@ -49,6 +49,9 @@ require(["jquery", "underscore", "backbone"], function ($, _, Backbone) {
 		});
 　	});
 
-
+	require(['models'], function (models){
+		var test = new models.testModel;
+		console.log(test.escape("name"));
+	});
 
 });
