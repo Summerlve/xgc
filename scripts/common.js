@@ -3,31 +3,31 @@
  *
  */
 require.config({
-	paths: {
+	paths: {		
 		"jquery": "lib/jquery-2.1.1.min",
+		"jquery.bootstrap": "lib/bootstrap.min",
 		"underscore": "lib/underscore-min",
 		"text": "lib/text",
 		"coreAjax": "core/core.ajax",
-		"coreAnimate": "core/core.animate",
-		"bootstrap": "lib/bootstrap.min"
+		"coreAnimate": "core/core.animate"	
 	},
 	shim: {
 		"underscore": {
 			exports: "_"
 		},
-		"bootstrap": {  
-            deps : [ "jquery" ],  
-            exports : "bootstrap" 
-        }  
+		"jquery.bootstrap": {
+            deps: ["jquery"]
+        }
 	}
 });
 
-require(["jquery", "underscore", "coreAjax", "coreAnimate"], function ($, _, Ajax, Animate) {
+require(["jquery", "underscore", "coreAjax", "coreAnimate", "jquery.bootstrap"], function ($, _, Ajax, Animate) {
 		
 	var $allNavbarBtn = $("a.my-navbar-btn"),
 		$allSidebarBtn = $("li.my-sidebar-btn"),
 		$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
-		$header = $("span.my-sidebar-header-title");
+		$header = $("span.my-sidebar-header-title"),
+		$menuButton = $("button.my-navbar-mobile-menu");
 	
 	// 初始化header
 	var header = $allNavbarBtn.filter(".active").text();
@@ -52,6 +52,9 @@ require(["jquery", "underscore", "coreAjax", "coreAnimate"], function ($, _, Aja
 		Animate.toggleActive($(this));
 		Ajax.loadContent($(this).data("index"));
 	});
-			
+	
+	$menuButton.on("click", function (e) {
+		Animate.menuToggleSlide();
+	});	
 });
 

@@ -1,4 +1,12 @@
 define(["jquery"], function($){
+	var menuToggleSlide = function (o) {
+		console.log("touch");
+		
+		
+		$(".nav").slideToggle("400");
+		$(".navbar-collapse").css("display", "block");
+	}
+	
 	// 切换btn的.active
 	var toggleActive = function (o) {
 	
@@ -60,6 +68,7 @@ define(["jquery"], function($){
 	};
 	
 	return {
+		menuToggleSlide: menuToggleSlide,
 		toggleActive: toggleActive,
 		toggleHeader: toggleHeader,
 		sidebarSubAnimate: sidebarSubAnimate
