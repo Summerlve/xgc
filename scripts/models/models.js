@@ -1,12 +1,18 @@
 define(["jquery", "underscore", "backbone"], function ($, _, Backbone){
-	var testModel = Backbone.Model.extend({
-		defaults: {
-			name: "<script>alert('xss')</script>"
-		}
+	//表的一行	
+	var tableRow = Backbone.Model.extend({
+			
+	});
+	
+	//表
+	var tableCollection = Backbone.Collection.extend({	
+		initialize: function (){		
+		},
+		model: tableRow
 	});
 	
 	return {
-		testModel: testModel
+		tableRow: tableRow,
+		tableCollection: tableCollection,
 	}
-
 });

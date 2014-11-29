@@ -29,8 +29,10 @@ require.config({
 
 require(["jquery", "underscore", "backbone"], function ($, _, Backbone) {
 	require(['views'], function (views){
-		var	$allSidebarBtn = $("li.my-sidebar-btn"),
+		var $allNavbarBtn = $("a.my-navbar-btn"),
+			$allSidebarBtn = $("li.my-sidebar-btn"),
 			$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
+			allNavbarBtnView = [],
 			allSidebarBtnView = [],
 			allSidebarSubBtnView = [];
 			
@@ -43,15 +45,30 @@ require(["jquery", "underscore", "backbone"], function ($, _, Backbone) {
 		
 		$.each($allSidebarSubBtn, function (key, value) {
 			var view = new views.sidebarSubBtnView({
-				el: value
-			});
+				el: $(value),
+				dataIndex: $(value).data("index")
+			});	
 			allSidebarSubBtnView.push(view);
 		});
+		
+		$.each($allNavbarBtn, function (key, value){
+			var view = new views.navbarBtnView({
+				el: value
+			});
+			allNavbarBtnView.push(view);		
+		});	
 　	});
 
 	require(['models'], function (models){
-		var test = new models.testModel;
-		console.log(test.escape("name"));
+		
+		var tableCollection = new models.tableCollection;
 	});
-
+	
+	$.getJSON("http://202.195.67.56/xgxt1/admin.php?s=/AuthManager/index.html",
+		
+		 function (data) {
+			console.log(data);
+		});
+	
+		
 });
