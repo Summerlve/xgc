@@ -1,74 +1,57 @@
 /*
- * 学工处用
- *
  *
  *
  */
-
-//RequireJS配置
 require.config({
-	baseUrl: "scripts/lib/",
 	paths: {
-		"jquery": "jquery-2.1.1.min",
-		"underscore": "underscore-min",
-		"backbone": "backbone-min",
-		"views": "../views/views",
-		"models": "../models/models",
-		"routers": "../routers/routers",
+		"jquery": "lib/jquery-2.1.1.min",
+		"underscore": "lib/underscore-min",
+		"text": "lib/text",
+		"coreAjax": "core/core.ajax",
+		"coreAnimate": "core/core.animate",
+		"bootstrap": "lib/bootstrap.min"
 	},
 	shim: {
-		"backbone": {
-			deps: ["underscore", "jquery"],
-			exports: "Backbone"
-		},
 		"underscore": {
-　　　　　　　exports: "_"
-		}
+			exports: "_"
+		},
+		"bootstrap": {  
+            deps : [ "jquery" ],  
+            exports : "bootstrap" 
+        }  
 	}
 });
 
-require(["jquery", "underscore", "backbone"], function ($, _, Backbone) {
-	require(['views'], function (views){
-		var $allNavbarBtn = $("a.my-navbar-btn"),
-			$allSidebarBtn = $("li.my-sidebar-btn"),
-			$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
-			allNavbarBtnView = [],
-			allSidebarBtnView = [],
-			allSidebarSubBtnView = [];
-			
-		$.each($allSidebarBtn, function (key, value) {
-			var view = new views.sidebarBtnView({
-				el: value
-			});
-			allSidebarBtnView.push(view);
-		});
+require(["jquery", "underscore", "coreAjax", "coreAnimate"], function ($, _, Ajax, Animate) {
 		
-		$.each($allSidebarSubBtn, function (key, value) {
-			var view = new views.sidebarSubBtnView({
-				el: $(value),
-				dataIndex: $(value).data("index")
-			});	
-			allSidebarSubBtnView.push(view);
-		});
-		
-		$.each($allNavbarBtn, function (key, value){
-			var view = new views.navbarBtnView({
-				el: value
-			});
-			allNavbarBtnView.push(view);		
-		});	
-　	});
-
-	require(['models'], function (models){
-		
-		var tableCollection = new models.tableCollection;
+	var $allNavbarBtn = $("a.my-navbar-btn"),
+		$allSidebarBtn = $("li.my-sidebar-btn"),
+		$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
+		$header = $("span.my-sidebar-header-title");
+	
+	// 初始化header
+	var header = $allNavbarBtn.filter(".active").text();
+	$header.text(header);
+	
+	// 点击导航栏btn	
+	$allNavbarBtn.on("click", function (e) {
+		Animate.toggleActive($(this));
+		Animate.toggleHeader($(this));
+		e.stopPropagation();
 	});
 	
-	$.getJSON("http://202.195.67.56/xgxt1/admin.php?s=/AuthManager/index.html",
-		
-		 function (data) {
-			console.log(data);
-		});
-	
-		
+	// 点击侧边栏btn
+	$allSidebarBtn.on("click", function (e) {
+		Animate.toggleActive($(this));
+		Animate.sidebarSubAnimate($(this)); // 侧边栏子栏收缩展开动画
+		e.stopPropagation();
+	});
+			
+	// 点击侧边栏子栏btn
+	$allSidebarSubBtn.on("click", function (e) {
+		Animate.toggleActive($(this));
+		Ajax.loadContent($(this).data("index"));
+	});
+			
 });
+

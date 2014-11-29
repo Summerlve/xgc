@@ -2,23 +2,28 @@
 	<table class="table table-bordered table-hover">
 		<thead>
 			<tr class="info">
-				<% for(var i = 0; i < th.length; i++) { %>
-					<td>
-					    <%=th[i]%>
-					</td>
-				<% } %>
+				<td>id</td>
+				<td>module</td>
+				<td>type</td>
+				<td>title</td>
+				<td>level</td>
+				<td>status</td>
+				<td>status_text</td>
 			</tr>
+			
 		</thead>
 		<tbody>
-			<% for(var i = 0; i < comment.length; i++) { %>
+			<% for (var i = 0; i < data.length; i++) { %>
 				<tr>
-					<% for (var j = 0; j < comment[i].length; j++) { %>
-						<td>
-							<%=comment[i][j]%>
-						</td>
-					<% } %>
+					<% _.each(data[i], function (value, key){ %>
+						<% if (key !== "rules" && key !== "_use_tip" && key !== "meta_title " && key !== "description") {%>			
+							<td>
+								<%= value %>
+							</td>
+						<% } %>
+					<% }); %>						
 				</tr>	
-			<% } %>	
+			<% } %>
 		</tbody>
 	</table>
 </div>
