@@ -5,7 +5,7 @@
 require.config({
 	paths: {		
 		"jquery": "lib/jquery-2.1.1.min",
-		"jquery.bootstrap": "lib/bootstrap.min",
+		"bootstrap": "lib/bootstrap.min",
 		"underscore": "lib/underscore-min",
 		"text": "lib/text",
 		"coreAjax": "core/core.ajax",
@@ -14,14 +14,11 @@ require.config({
 	shim: {
 		"underscore": {
 			exports: "_"
-		},
-		"jquery.bootstrap": {
-            deps: ["jquery"]
-        }
+		}
 	}
 });
 
-require(["jquery", "underscore", "coreAjax", "coreAnimate", "jquery.bootstrap"], function ($, _, Ajax, Animate) {
+require(["jquery", "underscore", "coreAjax", "coreAnimate", "bootstrap"], function ($, _, Ajax, Animate, bs) {
 		
 	var $allNavbarBtn = $("a.my-navbar-btn"),
 		$allSidebarBtn = $("li.my-sidebar-btn"),
@@ -54,7 +51,7 @@ require(["jquery", "underscore", "coreAjax", "coreAnimate", "jquery.bootstrap"],
 	});
 	
 	$menuButton.on("click", function (e) {
-		Animate.menuToggleSlide();
+		$('.collapse').collapse('toggle');
 	});	
 });
 
