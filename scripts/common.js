@@ -18,8 +18,8 @@ require.config({
 	}
 });
 
-require(["jquery", "underscore", "coreAjax", "coreAnimate", "bootstrap"], function ($, _, Ajax, Animate, bs) {
-		
+require(["jquery", "underscore", "coreAjax", "coreAnimate"], function ($, _, Ajax, Animate) {
+	require(["bootstrap"]);//防止bs加载慢了，出现问题
 	var $allNavbarBtn = $("a.my-navbar-btn"),
 		$allSidebarBtn = $("li.my-sidebar-btn"),
 		$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
