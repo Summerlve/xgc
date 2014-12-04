@@ -8,7 +8,6 @@ require.config({
 		"bootstrap": "lib/bootstrap.min",
 		"underscore": "lib/underscore-min",
 		"text": "lib/text",
-		"coreAjax": "core/core.ajax",
 		"coreAnimate": "core/core.animate"	
 	},
 	shim: {
@@ -18,7 +17,7 @@ require.config({
 	}
 });
 
-require(["jquery", "underscore", "coreAjax", "coreAnimate"], function ($, _, Ajax, Animate) {
+require(["jquery", "underscore", "coreAnimate"], function ($, _, Animate) {
 	require(["bootstrap"]);//防止bs加载慢了，出现问题
 	var $allNavbarBtn = $("a.my-navbar-btn"),
 		$allSidebarBtn = $("li.my-sidebar-btn"),
@@ -47,7 +46,6 @@ require(["jquery", "underscore", "coreAjax", "coreAnimate"], function ($, _, Aja
 	// 点击侧边栏子栏btn
 	$allSidebarSubBtn.on("click", function (e) {
 		Animate.toggleActive($(this));
-		Ajax.loadContent($(this).data("index"));
 	});
 	
 	$menuButton.on("click", function (e) {
