@@ -3,6 +3,7 @@
 	所有的字体默认为14px
 	字体在14px-16px之间
 	图标字体大小看情况
+	颜色参考：http://colrd.com/palette/18981/
 */
 * {
   font-size: 14px; }
@@ -12,18 +13,18 @@ nav.my-navbar {
   height: auto;
   border: 0 !important;
   border-radius: 0 !important;
-  background-color: #3498DB !important; }
+  background-color: #2b8cbe !important; }
 
 button.my-navbar-mobile-menu {
   margin-top: 13px;
   padding: 0;
   border: 0 !important;
-  background-color: #3498DB !important; }
+  background-color: #2b8cbe !important; }
 
 span.my-navbar-mobile-menu-glyphicon {
   font-size: 25px;
   color: white;
-  background-color: #3498DB; }
+  background-color: #2b8cbe; }
 
 a.my-navbar-brand {
   margin-top: 20px; }
@@ -162,7 +163,7 @@ div.content {
     li.my-sidebar-btn a span.my-sidebar-btn-glyphicon {
       font-size: 15px; }
 
-  .main-content {
+  div.main-content {
     margin-left: 0 !important;
     min-height: 0 !important; }
 

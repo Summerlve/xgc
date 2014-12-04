@@ -8,14 +8,14 @@ a.my-navbar-btn:hover {
 
 /* 侧边栏按钮active时，my-sidebar-btn的bgc变成蓝色，glyphicon和title变成白色 */
 li.my-sidebar-btn.active {
-  background-color: #3498db !important; }
+  background-color: #2b8cbe !important; }
   li.my-sidebar-btn.active > a > span.my-sidebar-btn-glyphicon,
   li.my-sidebar-btn.active > a > span.my-sidebar-btn-title {
     color: white !important; }
 
 li.my-sidebar-subbtn.active {
-  border: 1px solid #ECF0F1 !important;
-  background-color: #ECF0F1 !important; }
+  border: 1px solid #e0f3db !important;
+  background-color: #e0f3db !important; }
   li.my-sidebar-subbtn.active > a > span.my-sidebar-subbtn-glyphicon,
   li.my-sidebar-subbtn.active > a > span.my-sidebar-subbtn-title {
     color: black !important; }

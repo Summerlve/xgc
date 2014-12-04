@@ -3,6 +3,7 @@
 	所有的字体默认为14px
 	字体在14px-16px之间
 	图标字体大小看情况
+	颜色参考：http://colrd.com/palette/18981/
 */
 *{
 	font-size: 14px;
@@ -14,14 +15,15 @@ nav.my-navbar {
 	height: auto;
 	@include no-border;
 	@include no-border-radius;
-	@include bgc(#3498DB);
+	@include bgc(#2b8cbe);
 }
 
+//button:用于包裹mobile的menu按钮
 button.my-navbar-mobile-menu{
 	margin-top: 13px;
 	padding: 0;
 	@include no-border;
-	@include bgc(#3498DB);
+	@include bgc(#2b8cbe);
 }
 
 //mobile的menu按钮

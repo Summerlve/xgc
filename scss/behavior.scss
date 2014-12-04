@@ -11,7 +11,7 @@ a.my-navbar-btn:hover{
 //侧边栏
 /* 侧边栏按钮active时，my-sidebar-btn的bgc变成蓝色，glyphicon和title变成白色 */
 li.my-sidebar-btn.active{
-	@include bgc(#3498db);
+	@include bgc(#2b8cbe);
 	> a{
 		> span.my-sidebar-btn-glyphicon,
 		> span.my-sidebar-btn-title{
@@ -22,8 +22,8 @@ li.my-sidebar-btn.active{
 
 li.my-sidebar-subbtn.active{
 	//屏蔽bs自己border颜色
-	border: 1px solid #ECF0F1 !important;
-	@include bgc(#ECF0F1);
+	border: 1px solid #e0f3db !important;
+	@include bgc(#e0f3db);
 	> a{
 		> span.my-sidebar-subbtn-glyphicon,
 		> span.my-sidebar-subbtn-title{
