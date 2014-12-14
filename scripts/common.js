@@ -1,6 +1,5 @@
 /*
  *
- *
  */
 require.config({
 	paths: {		
@@ -8,48 +7,36 @@ require.config({
 		"bootstrap": "lib/bootstrap.min",
 		"underscore": "lib/underscore-min",
 		"text": "lib/text",
-		"coreAnimate": "core/core.animate"	
+		"datetimepicker": "lib/bootstrap-datetimepicker.min",
+		"Animate": "module/common.animate",
+		"Wechat": "module/common.wechat"
 	},
 	shim: {
 		"underscore": {
 			exports: "_"
+		},
+		"bootstrap": {
+			deps: ["jquery"]
+		},
+		"datetimepicker": {
+			deps: ["jquery", "bootstrap"]
 		}
 	}
 });
 
-require(["jquery", "underscore", "coreAnimate"], function ($, _, Animate) {
-	require(["bootstrap"]);//防止bs加载慢了，出现问题
-	var $allNavbarBtn = $("a.my-navbar-btn"),
-		$allSidebarBtn = $("li.my-sidebar-btn"),
-		$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
-		$header = $("span.my-sidebar-header-title"),
-		$menuButton = $("button.my-navbar-mobile-menu");
-	
-	// 初始化header
-	var header = $allNavbarBtn.filter(".active").text();
-	$header.text(header);
-	
-	// 点击导航栏btn	
-	$allNavbarBtn.on("click", function (e) {
-		Animate.toggleActive($(this));
-		Animate.toggleHeader($(this));
-		e.stopPropagation();
-	});
-	
-	// 点击侧边栏btn
-	$allSidebarBtn.on("click", function (e) {
-		Animate.toggleActive($(this));
-		Animate.sidebarSubAnimate($(this)); // 侧边栏子栏收缩展开动画
-		e.stopPropagation();
-	});
-			
-	// 点击侧边栏子栏btn
-	$allSidebarSubBtn.on("click", function (e) {
-		Animate.toggleActive($(this));
-	});
-	
-	$menuButton.on("click", function (e) {
-		$('.collapse').collapse('toggle');
-	});	
+require(["jquery"], function ($) {
+	//正常页面
+	if( $("#general-page").length ) {
+		require(["Animate"], function (Animate) {
+			Animate.init();
+		});	
+	}
+		
+	//微信页面
+	if ( $("#my-wechatHoli-form").length ) {
+		require(["Wechat"], function (Wechat) {
+			Wechat.init(); 
+		});
+	}
 });
 

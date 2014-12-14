@@ -7,10 +7,19 @@
 */
 *{
 	font-size: 14px;
+	font-family: Arial, Verdana, Sans-serif;
 }
 
-//导航栏 Start 
-nav.my-navbar {
+a, a:hover{
+	text-decoration: none !important;
+}
+
+ul, li{
+	list-style: none !important;
+}
+
+// 导航栏 Start 
+.my-navbar {
 	margin: 0;
 	height: auto;
 	@include no-border;
@@ -18,32 +27,32 @@ nav.my-navbar {
 	@include bgc(#2b8cbe);
 }
 
-//button:用于包裹mobile的menu按钮
-button.my-navbar-mobile-menu{
+// button:用于包裹mobile的menu按钮
+.my-navbar-mobile-menu{
 	margin-top: 13px;
 	padding: 0;
 	@include no-border;
 	@include bgc(#2b8cbe);
 }
 
-//mobile的menu按钮
-span.my-navbar-mobile-menu-glyphicon{
+// mobile的menu按钮
+.my-navbar-mobile-menu-glyphicon{
 	@include mobile-menu-glyphicon;
 }
 
-a.my-navbar-brand{
+.my-navbar-brand{
 	margin-top: 20px;
 }
 
-span.my-navbar-brand-title{
+.my-navbar-brand-title{
 	@include my-navbar-brand-title;
 }
 
-span.my-navbar-brand-glyphicon{
+.my-navbar-brand-glyphicon{
 	@include my-navbar-brand-glyphicon
 }
 
-a.my-navbar-btn{
+.my-navbar-btn{
 	margin: 15px 9px 15px 9px;
 	padding: 0px;
 	width: 78px;
@@ -51,26 +60,26 @@ a.my-navbar-btn{
 	border-radius: 11px;
 }
 
-span.my-navbar-btn-glyphicon{
+.my-navbar-btn-glyphicon{
 	margin-top: 10px;
 	font-size: 22px;
 	@include color(white);
 }
 
-p.my-navbar-btn-title{
+.my-navbar-btn-title{
 	margin-top: 0;
 	@include color(white);
 }
-//导航栏 End
+// 导航栏 End
 
-//主容器 Start
-div.main-container{
+// 主容器 Start
+.main-container{
 	overflow: hidden;
 }
-//主容器 End
+// 主容器 End
 
-//侧边栏 Start
-div.my-sidebar{
+// 侧边栏 Start
+.my-sidebar{
 	float: left;
 	margin-bottom: -3000px;
 	padding-bottom: 3000px;
@@ -78,50 +87,51 @@ div.my-sidebar{
 	background-color: #f2f2f2;
 }
 
-//侧边栏的子栏
-ul.my-sidebar-sub{
+// 侧边栏的子栏
+.my-sidebar-sub{
 	display: none;
 }
 
-li.my-sidebar-userinfo{	
+.my-sidebar-userinfo{	
 	@include no-border-radius;
-	span.my-sidebar-userinfo-title{
+	.my-sidebar-userinfo-title{
 		font-size: 15px !important;
 	}
 }
 
-li.my-sidebar-header{
+.my-sidebar-header{
 	@include no-border-radius;
 	@include bgc(rgb(239,239,239));
 	
-	span.my-sidebar-header-title{
+	.my-sidebar-header-title{
 		font-size: 19px !important;
 	}
-	span.my-sidebar-header-glyphicon{
+	.my-sidebar-header-glyphicon{
 		float: right;
 		font-size: 13px !important;
 	}
 }
 
-li.my-sidebar-btn{
+.my-sidebar-btn{
 	// 去掉 bs中的list-group-item的圆角
 	@include my-sidebar-btn;
 }
 
-li.my-sidebar-subbtn{
+.my-sidebar-subbtn{
 	@include my-sidebar-subbtn;
 }
-//侧边栏 End
+// 侧边栏 End
 
-//.main-content Start
-//.main-content的padding不需要设置
-div.main-content{
+// .main-content Start
+// .main-content的padding不需要设置
+.main-content{
   	margin-left: 200px;
   	padding: 0;
   	min-height: 780px;
+  	overflow: hidden; // 必须设置，不然会出现神经病错误...
 }
 
-ol.breadcrumb{
+.breadcrumb{
 	span{
 		@include breadcrumb-font-size;
 	}
@@ -136,35 +146,138 @@ ol.breadcrumb{
 	margin-bottom: 0;
 }
 
-//设置.content的padding，以保持排版的一致
-div.content{
+// 设置.content的padding，以保持排版的一致
+.content{
 	padding: 25px;
 }
-//.main-content End
+// .main-content End
 
-//零碎部件 Start
-div.my-notice-table{
-	
+// 零碎部件 Start
+
+// 零碎部件 End
+
+// 微信请假 Start
+.wechatHoli{
+	background-color: #2b8cbe;
 }
-//零碎部件 End
+
+// form table 等等东西的padding
+.my-wechatHoli-content{
+	padding: 30px 37px 37px 37px;	
+}
 
 
-//响应式 Start
+// 入口界面
+.my-wechatHoli-header{
+	padding-top: 60px;
+	font-size: 60px;
+	color: white;
+}
+
+.my-wechatHoli-panel{
+	padding: 40px 20px 20px 20px;
+}
+
+.my-wechatHoli-btn{
+	margin-bottom: 20px;
+	color: white;
+	background-color: #24749e;
+}
+
+.my-wechatHoli-btn-glyphicon{
+	font-size: 24px;
+	color: white;	
+}
+
+.my-wechatHoli-btn-title{
+	font-size: 32px;
+	line-height: 90px; /* 设置单行文字垂直居中 */
+}
+
+// 返回按钮
+.my-wechatHoli-returnBtn{
+	display: block;
+	margin: 12px auto auto 12px;
+	width: 52px;
+	background-color: #24749e;
+	border-radius: 6px;	
+}
+
+.my-wechatHoli-returnBtn-title{
+	font-size: 16px;
+	color: white;
+	line-height: 28px;
+}
+
+// 请假申请表
+.form-control{
+	@include bgc(white);
+	@include no-border;
+	@include no-border-radius;
+	@include no-shadow
+}
+
+.input-group-addon{
+	@include bgc(white);
+	@include no-border;
+	@include no-border-radius;
+	@include no-shadow
+}
+
+// 列表基本都是这个...好乱啊
+.my-wechatHoli-table{
+
+	overflow-y: scroll;
+	
+	thead{
+		border-bottom: 2px solid white !important;
+	}
+	
+	tr{ 
+		border-bottom: 2px solid white !important;
+	}
+	
+	tr:last-child{
+		border-bottom: 0px solid white !important;
+	}	
+	
+	td{
+		padding: 7px;
+		font-size: 17px;
+		color: white;
+	}
+}
+
+// 时间选择器的标头位置
+.datetimepicker-dropdown-bottom-right:before{
+	top: -7px;
+	left: 153px;
+}
+
+.datetimepicker-dropdown-bottom-right:after{
+	top: -6px;
+	left: 154px;
+	right: 43px;
+}
+// 微信请假 End
+
+
+// 响应式 Start
 @media screen and (max-width: 768px){
-	a.my-navbar-brand{
+	.my-navbar-brand{
 		margin-top: 0;
 		@include color(white);
 	}
 	
-	span.my-navbar-brand-title{
+	.my-navbar-brand-title{
 		font-size: 20px;
 	}
 	
-	span.my-navbar-brand-glyphicon{
+	.my-navbar-brand-glyphicon{
 		font-size: 17px;
 	}
 	
-	a.my-navbar-btn{
+	.my-navbar-btn{
 		margin-top: 5px;
 		margin-left: 17px;
 		padding: 0px;
@@ -173,18 +286,18 @@ div.my-notice-table{
 		border-radius: 11px;
 	}
 	
-	span.my-navbar-btn-glyphicon{
+	.my-navbar-btn-glyphicon{
 		margin-top: 10px;
 		font-size: 27px;
 		@include color(white);
 	}
 
-	p.my-navbar-btn-title{
+	.my-navbar-btn-title{
 		margin-top: 0;
 		@include color(white);
 	}
 	
-	div.my-sidebar{
+	.my-sidebar{
 		float: none !important;
 		position: static !important;
 		margin: 0;
@@ -193,11 +306,11 @@ div.my-notice-table{
 		height: auto !important;	
 	}
 	
-	li.my-sidebar-header{
-		span.my-sidebar-header-title{
+	.my-sidebar-header{
+		.my-sidebar-header-title{
 			font-size: 16px !important;
 		}
-		span.my-sidebar-header-glyphicon{
+		.my-sidebar-header-glyphicon{
 			position: relative;	
 			top: 4px;
 			right: 5px;
@@ -206,33 +319,33 @@ div.my-notice-table{
 		}
 	}
 	
-	li.my-sidebar-btn{
+	.my-sidebar-btn{
 		border-left: 0 !important;
 		border-right: 0 !important;
 		a{
-			span.my-sidebar-btn-title,
-			span.my-sidebar-btn-glyphicon{
+			.my-sidebar-btn-title,
+			.my-sidebar-btn-glyphicon{
 				font-size: 15px;
 			}
 		}
 	}
 	
-	div.main-content {
+	.main-content {
 		margin-left: 0 !important;
 		min-height: 0 !important;
 	}
 	
-	div.content{
+	.content{
 		padding: 0;
 	}
 	
-	//零碎部件响应式 Start
-	div.my-notice-table td{
+	// 零碎部件响应式 Start
+	.my-notice-table td{
 		font-size: 15px !important;
 	}
-	//零碎部件响应式 End
+	// 零碎部件响应式 End
 } 
-//响应式 End
+// 响应式 End
 
 
 

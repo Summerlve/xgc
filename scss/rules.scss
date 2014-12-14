@@ -51,8 +51,8 @@
 @mixin my-sidebar-btn{
 	@include no-border-radius;
 	> a{
-		> span.my-sidebar-btn-title,
-		> span.my-sidebar-btn-glyphicon{
+		> .my-sidebar-btn-title,
+		> .my-sidebar-btn-glyphicon{
 			font-size: 16px;
 		}
 	}	
@@ -62,8 +62,8 @@
 @mixin my-sidebar-subbtn{
 	@include no-border-radius;
 	> a{
-		> span.my-sidebar-subbtn-title,
-		> span.my-sidebar-subbtn-glyphicon{
+		> .my-sidebar-subbtn-title,
+		> .my-sidebar-subbtn-glyphicon{
 			@include color(black);
 			font-size: 14px;			
 		}

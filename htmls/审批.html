@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>审批</title>
+	<meta charset='utf-8'>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="wechatHoli">
+	<a class="text-center my-wechatHoli-returnBtn" href="">
+		<span class=" my-wechatHoli-returnBtn-title">返回</span>
+	</a>
+
+	<div class="my-wechatHoli-content">
+		<form action="" method="" role="form">
+			<div class="form-group">
+			    <input type="text" class="form-control"  placeholder="请假时间" readonly>
+			</div>
+			<div class="form-group">
+			    <input type="tel" class="form-control"  placeholder="请假类型" readonly>
+			</div>
+			<div class="form-group">
+				<textarea class="form-control" rows="2" placeholder="请假事由" readonly></textarea>
+			</div>
+			<div class="form-group text-right">
+				<button type="submit" class="btn btn-success btn-xs">允许</button>
+				<button type="submit" class="btn btn-danger btn-xs">不允许</button>
+			</div>
+		</form>
+	</div>
+	<script src="../scripts/lib/require.js" data-main="../scripts/common"></script>
+</body>
