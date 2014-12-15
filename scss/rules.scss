@@ -16,6 +16,7 @@
 //取消圆角
 @mixin no-border-radius{
 	border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
 }
 
 //去掉内阴影

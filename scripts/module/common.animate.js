@@ -1,6 +1,5 @@
-define(["jquery"], function($){
-	require(["bootstrap"]); // 防止异步加载的时候bootstrap晚于jquery
-	
+define(["jquery", "bootstrap"], function(){
+		
 	// 切换btn的.active
 	function toggleActive (o) {
 	
@@ -32,7 +31,7 @@ define(["jquery"], function($){
 					removeClass(className);
 			}break;
 			default:
-				//default 
+				// default 
 		}	
 	}
 	
@@ -61,8 +60,12 @@ define(["jquery"], function($){
 		$cur.slideToggle();
 	}
 	
-	//授权页面的动画效果
+	// 授权页面的动画效果
 	function permissionAnimate() {
+		
+		// 检测
+		if ( $(".authMngr-fahr-checkbox").length === 0 ) return ;
+		
 		$(".authMngr-fahr-checkbox input[type='checkbox']").on("click", function () {
 	    	var isChecked = $(this).is(":checked");
 	        $(this).closest("dt.authMngr-fahr-checkbox").
@@ -91,14 +94,16 @@ define(["jquery"], function($){
 	    });
 	}
 	
-	//初始化函数
-	function init () {
-	
+	// 导航栏、侧边栏按钮的初始化
+	function btnInit () {
 		var $allNavbarBtn = $("a.my-navbar-btn"),
 			$allSidebarBtn = $("li.my-sidebar-btn"),
 			$allSidebarSubBtn = $("li.my-sidebar-subbtn"),
 			$header = $("span.my-sidebar-header-title"),
 			$menuButton = $("button.my-navbar-mobile-menu");
+		
+		// 检测
+		if ( $allNavbarBtn.length === 0 ) return ;
 	
 		// 初始化header
 		var header = $allNavbarBtn.filter(".active").text();
@@ -123,15 +128,16 @@ define(["jquery"], function($){
 			toggleActive($(this));
 		});
 		
-		//响应式中的menu按钮
+		// 响应式中的menu按钮
 		$menuButton.on("click", function (e) {	
 			$(".collapse").collapse('toggle');
 		});	
-		
-		//授权页面的动画效果，先判断，有再执行（添加事件）
-		if ( $(".authMngr-fahr-checkbox").length !== 0) {
-			permissionAnimate();
-		}	
+	}
+	
+	// 初始化函数
+	function init () {
+		btnInit(); // 导航栏、侧边栏按钮的初始化
+		permissionAnimate(); // 授权页面的动画效果	
 	};
 	
 	return {

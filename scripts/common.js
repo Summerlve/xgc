@@ -8,10 +8,18 @@ require.config({
 		"underscore": "lib/underscore-min",
 		"text": "lib/text",
 		"datetimepicker": "lib/bootstrap-datetimepicker.min",
+		"zTree": "lib/jquery.ztree.all-3.5.min",
+		"ajaxapi": "lib/ajaxapi",
+		"think": "lib/think",
+		"qtip": "lib/jquery.qtip.min",
 		"Animate": "module/common.animate",
-		"Wechat": "module/common.wechat"
+		"Ajax": "module/common.ajax",
+		"Wechat": "module/common.wechat"		
 	},
 	shim: {
+		"jquery": {
+			exports: "$"
+		},
 		"underscore": {
 			exports: "_"
 		},
@@ -20,23 +28,26 @@ require.config({
 		},
 		"datetimepicker": {
 			deps: ["jquery", "bootstrap"]
+		},
+		"zTree": {
+			deps: ["jquery"]
+		},
+		"ajaxapi": {
+			deps: ["jquery"]
+		},
+		"think": {
+			deps: ["jquery"]
+		},
+		"qtip": {
+			deps: ["jquery"],
+			exports: "qtip"
 		}
 	}
 });
 
-require(["jquery"], function ($) {
-	//正常页面
-	if( $("#general-page").length ) {
-		require(["Animate"], function (Animate) {
-			Animate.init();
-		});	
-	}
-		
-	//微信页面
-	if ( $("#my-wechatHoli-form").length ) {
-		require(["Wechat"], function (Wechat) {
-			Wechat.init(); 
-		});
-	}
+require(["Animate", "Wechat", "Ajax"], function (Animate, Wechat, Ajax) {
+	Animate.init();
+	Ajax.init();
+	Wechat.init();
 });
 

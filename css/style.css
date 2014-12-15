@@ -20,6 +20,7 @@ ul, li {
   height: auto;
   border: 0 !important;
   border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
   background-color: #2b8cbe !important; }
 
 .my-navbar-mobile-menu {
@@ -74,12 +75,14 @@ ul, li {
   display: none; }
 
 .my-sidebar-userinfo {
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important; }
   .my-sidebar-userinfo .my-sidebar-userinfo-title {
     font-size: 15px !important; }
 
 .my-sidebar-header {
   border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
   background-color: #efefef !important; }
   .my-sidebar-header .my-sidebar-header-title {
     font-size: 19px !important; }
@@ -88,13 +91,15 @@ ul, li {
     font-size: 13px !important; }
 
 .my-sidebar-btn {
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important; }
   .my-sidebar-btn > a > .my-sidebar-btn-title,
   .my-sidebar-btn > a > .my-sidebar-btn-glyphicon {
     font-size: 16px; }
 
 .my-sidebar-subbtn {
-  border-radius: 0 !important; }
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important; }
   .my-sidebar-subbtn > a > .my-sidebar-subbtn-title,
   .my-sidebar-subbtn > a > .my-sidebar-subbtn-glyphicon {
     color: black !important;
@@ -112,7 +117,8 @@ ul, li {
     font-size: 15px !important; }
   .breadcrumb li {
     font-size: 15px !important;
-    border-radius: 0 !important; }
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important; }
     .breadcrumb li a {
       font-size: 15px !important; }
 
@@ -123,7 +129,42 @@ ul, li {
   background-color: #2b8cbe; }
 
 .my-wechatHoli-content {
-  padding: 30px 37px 37px 37px; }
+  padding: 30px 32px 32px 32px;
+  color: white !important; }
+  .my-wechatHoli-content * {
+    font-size: 15px !important; }
+  .my-wechatHoli-content .form-control {
+    background-color: white !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .my-wechatHoli-content .submit-btn {
+    color: white;
+    background-color: #24749e !important; }
+  .my-wechatHoli-content .btn {
+    border: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .my-wechatHoli-content .input-group-addon {
+    background-color: white !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .my-wechatHoli-content .my-wechatHoli-table tr {
+    border-bottom: 2px dashed #e6e6e6 !important; }
+  .my-wechatHoli-content .my-wechatHoli-table tbody tr:last-child {
+    border-bottom: 0 !important; }
+  .my-wechatHoli-content .my-wechatHoli-table td {
+    padding: 8px; }
+  .my-wechatHoli-content .my-wechatHoli-table .check-btn {
+    color: white;
+    background-color: #24749e; }
 
 .my-wechatHoli-header {
   padding-top: 60px;
@@ -152,48 +193,18 @@ ul, li {
   margin: 12px auto auto 12px;
   width: 52px;
   background-color: #24749e;
-  border-radius: 6px; }
+  /* 	border-radius: 6px;	 */ }
 
 .my-wechatHoli-returnBtn-title {
   font-size: 16px;
   color: white;
   line-height: 28px; }
 
-.form-control {
-  background-color: white !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.input-group-addon {
-  background-color: white !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.my-wechatHoli-table {
-  overflow-y: scroll; }
-  .my-wechatHoli-table thead {
-    border-bottom: 2px solid white !important; }
-  .my-wechatHoli-table tr {
-    border-bottom: 2px solid white !important; }
-  .my-wechatHoli-table tr:last-child {
-    border-bottom: 0px solid white !important; }
-  .my-wechatHoli-table td {
-    padding: 7px;
-    font-size: 17px;
-    color: white; }
-
 .datetimepicker-dropdown-bottom-right:before {
-  top: -7px;
-  left: 153px; }
+  display: none !important; }
 
 .datetimepicker-dropdown-bottom-right:after {
-  top: -6px;
-  left: 154px;
-  right: 43px; }
+  display: none !important; }
 
 @media screen and (max-width: 768px) {
   .my-navbar-brand {

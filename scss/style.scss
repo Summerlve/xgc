@@ -157,15 +157,69 @@ ul, li{
 // 零碎部件 End
 
 // 微信请假 Start
+// body的背景颜色
 .wechatHoli{
 	background-color: #2b8cbe;
 }
 
-// form table 等等东西的padding
+// 主题内容
 .my-wechatHoli-content{
-	padding: 30px 37px 37px 37px;	
+	padding: 30px 32px 32px 32px;	
+	
+	* {
+		font-size: 15px !important;
+	}
+	
+	color: white !important;
+	
+	// 请假申请表
+	.form-control{
+		@include bgc(white);
+		@include no-border;
+		@include no-border-radius;
+		@include no-shadow;
+	}
+	
+	.submit-btn{
+		color: white;
+		background-color: #24749e !important;	
+	}
+	
+	//按钮去圆角和阴影
+	.btn{	
+		@include no-border;
+		@include no-border-radius;
+		@include no-shadow;
+	}
+	
+	.input-group-addon{
+		@include bgc(white);
+		@include no-border;
+		@include no-border-radius;
+		@include no-shadow
+	}
+	
+	// 列表基本都是这个...好乱啊
+	.my-wechatHoli-table{
+	
+		tr{ 
+			border-bottom: 2px dashed #e6e6e6 !important;
+		}
+		
+		tbody tr:last-child{
+			border-bottom: 0 !important;
+		}
+		
+		td{
+			padding: 8px;
+		}
+		
+		.check-btn{
+			color: white;
+			background-color: #24749e;
+		}
+	}
 }
-
 
 // 入口界面
 .my-wechatHoli-header{
@@ -200,7 +254,7 @@ ul, li{
 	margin: 12px auto auto 12px;
 	width: 52px;
 	background-color: #24749e;
-	border-radius: 6px;	
+/* 	border-radius: 6px;	 */
 }
 
 .my-wechatHoli-returnBtn-title{
@@ -209,55 +263,13 @@ ul, li{
 	line-height: 28px;
 }
 
-// 请假申请表
-.form-control{
-	@include bgc(white);
-	@include no-border;
-	@include no-border-radius;
-	@include no-shadow
-}
-
-.input-group-addon{
-	@include bgc(white);
-	@include no-border;
-	@include no-border-radius;
-	@include no-shadow
-}
-
-// 列表基本都是这个...好乱啊
-.my-wechatHoli-table{
-
-	overflow-y: scroll;
-	
-	thead{
-		border-bottom: 2px solid white !important;
-	}
-	
-	tr{ 
-		border-bottom: 2px solid white !important;
-	}
-	
-	tr:last-child{
-		border-bottom: 0px solid white !important;
-	}	
-	
-	td{
-		padding: 7px;
-		font-size: 17px;
-		color: white;
-	}
-}
-
 // 时间选择器的标头位置
 .datetimepicker-dropdown-bottom-right:before{
-	top: -7px;
-	left: 153px;
+	display: none !important;
 }
 
 .datetimepicker-dropdown-bottom-right:after{
-	top: -6px;
-	left: 154px;
-	right: 43px;
+	display: none !important;
 }
 // 微信请假 End
 
