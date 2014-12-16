@@ -7,8 +7,15 @@ define(["jquery", "underscore", "bootstrap", "datetimepicker"], function ($, _) 
 			$dataPickerEd = $("#my-wecharHoli-formDatetimeEd"),
 			$dataPikrRm = $(".my-dataPikrRm"),
 			$submit = $(".form-group button[type='submit']"),
+			$byx = $("button.byx"),
 			today = new Date();
-		
+				
+		// 审批时点击不允许
+	    $byx.on("click", function() {
+			alert("您真的不允许可怜的学生党请个假吗？");
+			alert("您真的不允许可怜的学生党请个假吗？");
+	    });
+	    
 		// 检测	
 		if ( $dataPickerBg.length === 0) return;
 		
@@ -84,7 +91,7 @@ define(["jquery", "underscore", "bootstrap", "datetimepicker"], function ($, _) 
 		 	}
 		 	
 		 	// 表单验证，验证电话号码	 	
-	    }); 
+	    }); 	    
 	};
 	
 	return {
