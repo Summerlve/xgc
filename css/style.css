@@ -9,11 +9,30 @@
   font-size: 14px;
   font-family: Arial, Verdana, Sans-serif; }
 
+body {
+  padding: 0 !important; }
+
 a, a:hover {
   text-decoration: none !important; }
 
 ul, li {
   list-style: none !important; }
+
+.login-main {
+  padding: 0;
+  width: 100%; }
+
+.login-leftPhotos {
+  float: left;
+  width: 70%;
+  overflow: hidden; }
+
+.login-rightLogin {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: #6db8de !important;
+  /* 	overflow: hidden;  */ }
 
 .my-navbar {
   margin: 0;
@@ -125,80 +144,36 @@ ul, li {
 .content {
   padding: 25px; }
 
-.wechatHoli {
-  background-color: #2b8cbe; }
-
 .my-wechatHoli-content {
-  padding: 30px 32px 32px 32px;
-  color: white !important; }
-  .my-wechatHoli-content * {
-    font-size: 15px !important; }
-  .my-wechatHoli-content .form-control {
-    background-color: white !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .my-wechatHoli-content .submit-btn {
-    color: white;
-    background-color: #24749e !important; }
-  .my-wechatHoli-content .btn {
-    border: 0 !important;
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .my-wechatHoli-content .input-group-addon {
-    background-color: white !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-  .my-wechatHoli-content .my-wechatHoli-table tr {
-    border-bottom: 2px dashed #e6e6e6 !important; }
-  .my-wechatHoli-content .my-wechatHoli-table tbody tr:last-child {
-    border-bottom: 0 !important; }
-  .my-wechatHoli-content .my-wechatHoli-table td {
-    padding: 10px; }
-  .my-wechatHoli-content .my-wechatHoli-table .check-btn {
-    color: white;
-    background-color: #24749e; }
+  padding: 10px; }
 
-.my-wechatHoli-header {
-  padding-top: 60px;
-  font-size: 60px;
-  color: white; }
+.my-wechatHoli-navtext {
+  font-size: 22px;
+  color: black !important; }
 
 .my-wechatHoli-panel {
-  padding: 40px 20px 20px 20px; }
+  padding: 50px; }
 
 .my-wechatHoli-btn {
   margin-bottom: 20px;
-  color: white;
-  background-color: #24749e; }
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 6px; }
 
 .my-wechatHoli-btn-glyphicon {
   font-size: 24px;
-  color: white; }
+  color: black; }
 
 .my-wechatHoli-btn-title {
   font-size: 32px;
-  line-height: 90px;
+  line-height: 86px;
   /* 设置单行文字垂直居中 */ }
 
 .my-wechatHoli-returnBtn {
-  display: block;
-  margin: 12px auto auto 12px;
-  width: 52px;
-  background-color: #24749e;
-  /* 	border-radius: 6px;	 */ }
-
-.my-wechatHoli-returnBtn-title {
-  font-size: 16px;
-  color: white;
-  line-height: 28px; }
+  margin-left: 16px; }
+  .my-wechatHoli-returnBtn * {
+    color: black !important; }
 
 .datetimepicker-dropdown-bottom-right:before {
   display: none !important; }

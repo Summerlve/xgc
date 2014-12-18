@@ -5,9 +5,14 @@
 	图标字体大小看情况
 	颜色参考：http://colrd.com/palette/18981/
 */
+
 *{
 	font-size: 14px;
 	font-family: Arial, Verdana, Sans-serif;
+}
+
+body{
+	padding: 0 !important;
 }
 
 a, a:hover{
@@ -16,6 +21,26 @@ a, a:hover{
 
 ul, li{
 	list-style: none !important;
+}
+
+// 登陆页面
+.login-main{
+	padding: 0;
+	width: 100%;
+}
+
+.login-leftPhotos{
+	float: left;
+	width: 70%;
+	overflow: hidden;
+}
+
+.login-rightLogin{
+	float: left;
+	width: 30%;
+	height: 100%;
+	@include bgc(#6db8de);
+/* 	overflow: hidden;  */
 }
 
 // 导航栏 Start 
@@ -157,110 +182,45 @@ ul, li{
 // 零碎部件 End
 
 // 微信请假 Start
-// body的背景颜色
-.wechatHoli{
-	background-color: #2b8cbe;
-}
-
-// 主题内容
+// 主体内容
 .my-wechatHoli-content{
-	padding: 30px 32px 32px 32px;	
-	
-	* {
-		font-size: 15px !important;
-	}
-	
-	color: white !important;
-	
-	// 请假申请表
-	.form-control{
-		@include bgc(white);
-		@include no-border;
-		@include no-border-radius;
-		@include no-shadow;
-	}
-	
-	.submit-btn{
-		color: white;
-		background-color: #24749e !important;	
-	}
-	
-	//按钮去圆角和阴影
-	.btn{	
-		@include no-border;
-		@include no-border-radius;
-		@include no-shadow;
-	}
-	
-	.input-group-addon{
-		@include bgc(white);
-		@include no-border;
-		@include no-border-radius;
-		@include no-shadow
-	}
-	
-	// 列表基本都是这个...好乱啊
-	.my-wechatHoli-table{
-	
-		tr{ 
-			border-bottom: 2px dashed #e6e6e6 !important;
-		}
-		
-		tbody tr:last-child{
-			border-bottom: 0 !important;
-		}
-		
-		td{
-			padding: 10px;
-		}
-		
-		.check-btn{
-			color: white;
-			background-color: #24749e;
-		}
-	}
+	padding: 10px;
 }
 
-// 入口界面
-.my-wechatHoli-header{
-	padding-top: 60px;
-	font-size: 60px;
-	color: white;
+// 微信请假入口界面
+.my-wechatHoli-navtext{
+	font-size: 22px;
+	color: black !important;
 }
 
 .my-wechatHoli-panel{
-	padding: 40px 20px 20px 20px;
+	padding: 50px;
 }
 
 .my-wechatHoli-btn{
 	margin-bottom: 20px;
-	color: white;
-	background-color: #24749e;
+	color: black;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 6px;
 }
 
 .my-wechatHoli-btn-glyphicon{
 	font-size: 24px;
-	color: white;	
+	color: black;	
 }
 
 .my-wechatHoli-btn-title{
 	font-size: 32px;
-	line-height: 90px; /* 设置单行文字垂直居中 */
+	line-height: 86px; /* 设置单行文字垂直居中 */
 }
 
 // 返回按钮
 .my-wechatHoli-returnBtn{
-	display: block;
-	margin: 12px auto auto 12px;
-	width: 52px;
-	background-color: #24749e;
-/* 	border-radius: 6px;	 */
-}
-
-.my-wechatHoli-returnBtn-title{
-	font-size: 16px;
-	color: white;
-	line-height: 28px;
+	margin-left: 16px;
+	*{
+		color: black !important; 
+	}
 }
 
 // 时间选择器的标头位置
