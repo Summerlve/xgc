@@ -184,7 +184,7 @@ ul, li{
 // 微信请假 Start
 // 主体内容
 .my-wechatHoli-content{
-	padding: 10px;
+	padding: 6px;
 }
 
 // 微信请假入口界面
@@ -194,15 +194,15 @@ ul, li{
 }
 
 .my-wechatHoli-panel{
-	padding: 50px;
+	padding: 0px;
 }
 
 .my-wechatHoli-btn{
-	margin-bottom: 20px;
+	margin-top: 25px;
 	color: black;
 	background-color: white;
-	border: 2px solid black;
-	border-radius: 6px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
 }
 
 .my-wechatHoli-btn-glyphicon{
@@ -211,13 +211,13 @@ ul, li{
 }
 
 .my-wechatHoli-btn-title{
-	font-size: 32px;
-	line-height: 86px; /* 设置单行文字垂直居中 */
+	font-size: 34px;
+	line-height: 80px; /* 设置单行文字垂直居中 */
 }
 
 // 返回按钮
 .my-wechatHoli-returnBtn{
-	margin-left: 16px;
+	margin-left: 12px;
 	*{
 		color: black !important; 
 	}

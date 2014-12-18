@@ -145,33 +145,33 @@ ul, li {
   padding: 25px; }
 
 .my-wechatHoli-content {
-  padding: 10px; }
+  padding: 6px; }
 
 .my-wechatHoli-navtext {
   font-size: 22px;
   color: black !important; }
 
 .my-wechatHoli-panel {
-  padding: 50px; }
+  padding: 0px; }
 
 .my-wechatHoli-btn {
-  margin-bottom: 20px;
+  margin-top: 25px;
   color: black;
   background-color: white;
-  border: 2px solid black;
-  border-radius: 6px; }
+  border-top: 1px solid black;
+  border-bottom: 1px solid black; }
 
 .my-wechatHoli-btn-glyphicon {
   font-size: 24px;
   color: black; }
 
 .my-wechatHoli-btn-title {
-  font-size: 32px;
-  line-height: 86px;
+  font-size: 34px;
+  line-height: 80px;
   /* 设置单行文字垂直居中 */ }
 
 .my-wechatHoli-returnBtn {
-  margin-left: 16px; }
+  margin-left: 12px; }
   .my-wechatHoli-returnBtn * {
     color: black !important; }
 
