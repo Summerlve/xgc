@@ -57,7 +57,7 @@ ul, li{
 	margin-top: 13px;
 	padding: 0;
 	@include no-border;
-	@include bgc(#2b8cbe);
+	@include bgc(#24749e);
 }
 
 // mobile的menu按钮
@@ -182,45 +182,44 @@ ul, li{
 // 零碎部件 End
 
 // 微信请假 Start
-// 主体内容
 .my-wechatHoli-content{
-	padding: 6px;
+	margin: 10px !important;
+	min-height: 300px;
 }
 
-// 微信请假入口界面
-.my-wechatHoli-navtext{
-	font-size: 22px;
-	color: black !important;
+.my-wechatHoli-returnBtn{
+	float: right;
+}
+
+.my-wechatHoli-body{
+	@include bgc(#2b8cbe);
+}
+
+.my-wechatHoli-header{
+	padding-top: 80px;
+	font-size: 55px;
+	color: white;
 }
 
 .my-wechatHoli-panel{
-	padding: 0px;
+	padding: 10px 60px 70px 60px;	
 }
 
 .my-wechatHoli-btn{
-	margin-top: 25px;
-	color: black;
-	background-color: white;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+	margin-top: 20px;
+	color: white;
+	@include bgc(#24749e);
+	border-radius: 6px;
 }
 
 .my-wechatHoli-btn-glyphicon{
 	font-size: 24px;
-	color: black;	
+	color: white;	
 }
 
 .my-wechatHoli-btn-title{
 	font-size: 34px;
 	line-height: 80px; /* 设置单行文字垂直居中 */
-}
-
-// 返回按钮
-.my-wechatHoli-returnBtn{
-	margin-left: 12px;
-	*{
-		color: black !important; 
-	}
 }
 
 // 时间选择器的标头位置

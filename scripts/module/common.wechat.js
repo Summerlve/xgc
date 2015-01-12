@@ -3,19 +3,12 @@ define(["jquery", "underscore", "bootstrap", "datetimepicker"], function ($, _) 
 	// 初始化函数
 	var init = function () {
 	
-		var $dataPickerBg = $("#my-wecharHoli-formDatetimeBg"),
-			$dataPickerEd = $("#my-wecharHoli-formDatetimeEd"),
+		var $dataPickerBg = $(".my-wecharHoli-formDatetimeBg"),
+			$dataPickerEd = $(".my-wecharHoli-formDatetimeEd"),
 			$dataPikrRm = $(".my-dataPikrRm"),
 			$submit = $(".form-group button[type='submit']"),
-			$byx = $("button.byx"),
-			today = new Date();
-				
-		// 审批时点击不允许
-	    $byx.on("click", function() {
-			alert("您真的不允许可怜的学生党请个假吗？");
-			alert("您真的不允许可怜的学生党请个假吗？");
-	    });
-	    
+			today = new Date( Date.parse( new Date() ) + 30*60*1000 );
+			  
 		// 检测	
 		if ( $dataPickerBg.length === 0) return;
 		
@@ -45,7 +38,7 @@ define(["jquery", "underscore", "bootstrap", "datetimepicker"], function ($, _) 
 	        format: "yyyy-mm-dd hh:ii"
 	    }).on("changeDate", function (e) {
 			// 当选完开始时间之后，设置结束时间不能早于开始时间
-			$dataPickerEd.datetimepicker( 'setStartDate', $("#timeBg").val() );
+			$dataPickerEd.datetimepicker("setStartDate", $("#timeBg").val());
 		});
 	    
 	    $dataPickerEd.datetimepicker({
@@ -60,14 +53,14 @@ define(["jquery", "underscore", "bootstrap", "datetimepicker"], function ($, _) 
 	        startDate: today,
 	        format: "yyyy-mm-dd hh:ii"
 	    }).on("changeDate", function (e) {
-			$dataPickerBg.datetimepicker( 'setEndDate', $("#timeEd").val() );
+			$dataPickerBg.datetimepicker("setEndDate", $("#timeEd").val());
 		});
 	    
 	    // 点击x
 	    $dataPikrRm.on("click" ,function (e) {
 	    	// 两个时间选择器的初始时间都重置
-	    	$dataPickerBg.datetimepicker( 'setEndDate', null );
-			$dataPickerEd.datetimepicker( 'setStartDate', today );
+	    	$dataPickerBg.datetimepicker("setEndDate", null);
+			$dataPickerEd.datetimepicker("setStartDate", today);
 			
 			// placeholder恢复
 	    	var $curInput = $(this).parent("span").siblings("input");

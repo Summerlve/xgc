@@ -46,7 +46,7 @@ ul, li {
   margin-top: 13px;
   padding: 0;
   border: 0 !important;
-  background-color: #2b8cbe !important; }
+  background-color: #24749e !important; }
 
 .my-navbar-mobile-menu-glyphicon {
   font-size: 25px;
@@ -145,35 +145,37 @@ ul, li {
   padding: 25px; }
 
 .my-wechatHoli-content {
-  padding: 6px; }
+  margin: 10px !important;
+  min-height: 300px; }
 
-.my-wechatHoli-navtext {
-  font-size: 22px;
-  color: black !important; }
+.my-wechatHoli-returnBtn {
+  float: right; }
+
+.my-wechatHoli-body {
+  background-color: #2b8cbe !important; }
+
+.my-wechatHoli-header {
+  padding-top: 80px;
+  font-size: 55px;
+  color: white; }
 
 .my-wechatHoli-panel {
-  padding: 0px; }
+  padding: 10px 60px 70px 60px; }
 
 .my-wechatHoli-btn {
-  margin-top: 25px;
-  color: black;
-  background-color: white;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; }
+  margin-top: 20px;
+  color: white;
+  background-color: #24749e !important;
+  border-radius: 6px; }
 
 .my-wechatHoli-btn-glyphicon {
   font-size: 24px;
-  color: black; }
+  color: white; }
 
 .my-wechatHoli-btn-title {
   font-size: 34px;
   line-height: 80px;
   /* 设置单行文字垂直居中 */ }
-
-.my-wechatHoli-returnBtn {
-  margin-left: 12px; }
-  .my-wechatHoli-returnBtn * {
-    color: black !important; }
 
 .datetimepicker-dropdown-bottom-right:before {
   display: none !important; }
