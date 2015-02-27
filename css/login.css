@@ -1,0 +1,38 @@
+body{
+	background-image: url("img/1-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; 
+}
+
+.my-login{
+	margin-top: 165px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 36px 30px 20px 30px;
+	width: 380px;
+	height: auto;
+	overflow: hidden;
+	border: 1px solid #fff; 
+	color: #000;
+	border-radius: 9px;
+	box-shadow: 0 0 17px #222; 
+	background: -moz-linear-gradient(top, #fff, #efefef 8%);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#f4f4f4));
+
+}
+
+@media screen and (max-width: 768px) {
+	body{
+		background-size: auto; 
+	}
+
+	.my-login{
+		margin: 145px 18px auto 18px;
+		padding: 33px 52px 11px 52px;
+		width: auto;
+		height: auto;
+	}
+}
+
+
+  

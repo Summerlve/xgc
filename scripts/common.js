@@ -14,7 +14,6 @@ require.config({
 		"qtip": "lib/jquery.qtip.min",
 		"Animate": "module/common.animate",
 		"Ajax": "module/common.ajax",
-		"Wechat": "module/common.wechat"		
 	},
 	shim: {
 		"jquery": {
@@ -48,6 +47,5 @@ require.config({
 require(["Animate", "Wechat", "Ajax"], function (Animate, Wechat, Ajax) {
 	Animate.init();
 	Ajax.init();
-	Wechat.init();
 });
 

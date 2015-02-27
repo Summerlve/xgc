@@ -226,7 +226,7 @@ define(["jquery", "underscore", "zTree", "ajaxapi"], function(){
 	function init () {
 		zTreeInit();
 	}
-　　
+　
 	return {
 		init: init
 	};
