@@ -146,6 +146,52 @@
 			</div>
 		</div>
 	</script>
+	
+	<script type="text/template" id="resultItemView">
+		<td>
+			<%= timeRange %>
+		</td>
+		<td>
+			<a data-toggle="modal" data-target="#myModal"><%= isAllow %></a>
+		</td>
+	</script>
+
+	<script type="text/template" id="detailsView">
+		<div class="panel panel-primary my-wechatHoli-content">
+			<div class="panel-heading">
+				详情
+				<a class="btn btn-primary btn-xs my-wechatHoli-returnBtn" role="button">返回</a>
+			</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<h5 class="list-group-item-heading">请假结果：</h4>
+						<p class="list-group-item-text">
+							<%= isAllow %> 
+						</p>
+					</li>
+					<li class="list-group-item">
+						<h5 class="list-group-item-heading">请假时间：</h4>
+						<p class="list-group-item-text">
+							<%= timeRange %>
+						</p>
+					</li>
+					<li class="list-group-item">
+						<h5 class="list-group-item-heading">请假类型：</h4>
+						<p class="list-group-item-text">
+							<%= kind %>
+						</p>
+					</li>
+					<li class="list-group-item">
+						<h5 class="list-group-item-heading">请假事由：</h4>
+						<p class="list-group-item-text">
+							<%= reason %>
+						</p>
+					</li>
+				</ul>				
+			 </div>	
+		 </div>
+	</script>
 	<script src="../../scripts/lib/jquery-2.1.1.min.js"></script>
 	<script src="../../scripts/lib/underscore-min.js"></script>
 	<script src="../../scripts/lib/backbone-min.js"></script>

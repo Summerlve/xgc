@@ -13,7 +13,6 @@ var resultList = Backbone.Collection.extend({
 	model: resultItem,
 	localStorage: new Backbone.LocalStorage("results")
 });
-
 var results = new resultList(); // 所有结果
 
 // view
@@ -24,11 +23,16 @@ var appView = Backbone.View.extend({
 		return this;
 	},
 });
+var App = new appView(); // App的初始界面
 
 var applyView = Backbone.View.extend({
 	template: _.template($("#applyView").html()),
+	events: {
+		"click .my-wechatHoli-returnBtn": "returnBtnClick"
+	},
 	initialize: function () {
-		$("body").on("click", ".my-wechatHoli-returnBtn", this.returnBtnClick.bind(this));
+		_.bindAll(this, "returnBtnClick");
+/* 		$("body").on("click", ".my-wechatHoli-returnBtn", this.returnBtnClick.bind(this)); */
 	},
 	render: function () {
 		this.$el.html(this.template());
@@ -39,12 +43,16 @@ var applyView = Backbone.View.extend({
     	router.navigate("", {trigger: true, replace: true});
     }
 });
+var apply = new applyView(); // 请假申请	
 
 var resultView = Backbone.View.extend({
 	template: _.template($("#resultView").html()),
+	events: {
+		"click .my-wechatHoli-returnBtn": "returnBtnClick"
+	},
 	initialize: function () {
 		_.bindAll(this, "returnBtnClick");
-		$("body").on("click", ".my-wechatHoli-returnBtn", this.returnBtnClick);
+/* 		$("body").on("click", ".my-wechatHoli-returnBtn", this.returnBtnClick); */
 		results.fetch(); // 获取结果
 	},
   	render: function () {
@@ -57,6 +65,7 @@ var resultView = Backbone.View.extend({
     	router.navigate("", {trigger: true, replace: true});
     }
 });
+var result = new resultView(); // 查看结果
 
 var resultTableView = Backbone.View.extend({
 	tagName: "table",
@@ -77,9 +86,12 @@ var resultTableView = Backbone.View.extend({
 var resultItemView = Backbone.View.extend({
 	tagName: "tr",
 /* 	className: "warning", */
-	template: _.template("<td><%= timeRange %></td><td><a href><%= isAllow %></a></td>"),
+	template: _.template($("#resultItemView").html()),
+	events: {
+		"click a": "details"
+	},
 	initialize: function () {
-		_.bindAll(this, "render");
+		_.bindAll(this, "render", "details");
 	},
 	render: function () {
 		var miniResults = {}
@@ -87,14 +99,29 @@ var resultItemView = Backbone.View.extend({
 		miniResults.isAllow = this.model.get("isAllow");
 		this.$el.html(this.template(miniResults));
 		return this;
+	},
+	details: function (e) {
+		e.preventDefault();
+		var details = new detailsView({model: this.model});
+		result.remove();
+		$("body").prepend(details.render().el);
 	}
 });
 
-/*
 var detailsView = Backbone.View.extend({
-	el
+	template: _.template($("#detailsView").html()),
+	events: {
+		"click .my-wechatHoli-returnBtn": "returnBtnClick"
+	},
+	render: function () {
+		this.$el.html(this.template(this.model.toJSON()));
+		return this;
+	},
+	returnBtnClick: function () {
+		this.remove();
+		$("body").prepend(result.render().el);
+	}
 });
-*/
 
 // router
 var appRouter = Backbone.Router.extend({
@@ -104,7 +131,7 @@ var appRouter = Backbone.Router.extend({
 		"result": "result",
 	},
 	initialize: function (options) {
-		Backbone.history.start(/* {pushState: true} */);
+		Backbone.history.start();
 	},
 	apply: function () {
 		App.remove();
@@ -121,19 +148,7 @@ var appRouter = Backbone.Router.extend({
 		$("body").prepend(App.render().el).addClass("my-wechatHoli-body");
 	}
 });
-
-
-// App的初始界面
-var App = new appView(); 
-
-// 查看结果
-var result = new resultView(); 
-
-// 请假申请	
-var apply = new applyView(); 
-
-// 路由
-var router = new appRouter();
+var router = new appRouter(); // 路由
 
 
 // 时间选择器的初始化函数
